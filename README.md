@@ -104,8 +104,8 @@ Se for necessário configurar algo antes de iniciar o banco de dados insira os c
 
 ## Linguagens, dependencias e libs utilizadas :books:
 
-- [React](https://pt-br.reactjs.org/docs/create-a-new-react-app.html)
-- [React PDF](https://react-pdf.org/)
+- [React Native](https://reactnative.dev/docs/getting-started)
+- [Vector Icons](https://github.com/oblador/react-native-vector-icons)
 
 ...
 
