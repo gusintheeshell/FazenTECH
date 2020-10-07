@@ -25,6 +25,7 @@ const screens = createStackNavigator({
   // Settings,
 }, {
   defaultNavigationOptions: {
+    headerTitle: null,
     headerStyle: {
       height:theme.sizes.base * 4,
       backgroundColor: theme.colors.white,
@@ -32,7 +33,7 @@ const screens = createStackNavigator({
       elevation: 0,
     },
     headerBackImage: <Image source={require('../assets/icons/back.png')}/>,
-    headerBackTitle: '',
+    headerBackTitleVisible: false,
     headerLeftContainerStyle: {
       alignItems: 'center',
       marginLeft: theme.sizes.base,
