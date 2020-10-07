@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
   },
   toggle: {
     position: 'absolute',
-    alignItems: 'flex-end',
+    alignItems: 'center',
     width: theme.sizes.base * 2,
     height: theme.sizes.base * 2,
     top: theme.sizes.base,

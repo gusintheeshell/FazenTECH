@@ -1,5 +1,5 @@
 import React from 'react';
-import { Alert, ActivityIndicator, Keyboard, KeyboardAvoidingView, StyleSheet } from 'react-native';
+import { Alert, ActivityIndicator, Keyboard, KeyboardAvoidingView, Platform, StyleSheet } from 'react-native';
 
 import { Button, Block, Input, Text } from '../components';
 import { theme } from '../constants';
@@ -54,8 +54,11 @@ handleSignUp() {
   const { loading, errors } = this.state;
   const hasErrors = key => errors.includes(key) ? styles.hasErrors : null;
    return (
-     <KeyboardAvoidingView style={styles.signup} behavior="padding">
-       <Block padding={[0], theme.sizes.base * 2}>
+     <KeyboardAvoidingView 
+      style={styles.signup} 
+      behavior={Platform.OS == "ios" ? "padding" : "height"}
+    >
+       <Block padding={[0, theme.sizes.base * 2]}>
         <Text h1 bold>Cadastrar</Text>
         <Block middle>
           <Input 

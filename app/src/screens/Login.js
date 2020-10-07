@@ -49,7 +49,7 @@ export default class Login extends Component {
     const hasErrors = key => (errors.includes(key) ? styles.hasErrors : null);
 
     return (
-      <KeyboardAvoidingView style={styles.login} behavior="padding">
+      <KeyboardAvoidingView style={styles.login} behavior="height">
         <Block padding={[0, theme.sizes.base * 2]}>
           <Text h1 bold>
             Entrar
@@ -95,7 +95,8 @@ const styles = StyleSheet.create({
     borderRadius: 0,
     borderWidth: 0,
     borderBottomColor: theme.colors.gray2,
-    borderBottomWidth: StyleSheet.hairlineWidth
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    backgroundColor: 'transparent',
   },
   hasErrors: {
     borderBottomColor: theme.colors.accent
