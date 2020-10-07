@@ -45,9 +45,7 @@ a comunicação com o servidor e banco de dados da fazenda.
 ## Layout da Aplicação :dash:
 
 
-... 
-
-Se ainda não houver deploy, insira capturas de tela da aplicação ou gifs
+![](https://github.com/gusbdev/FazenTECH/blob/master/appGifs/1.gif)
 
 ## Pré-requisitos
 
