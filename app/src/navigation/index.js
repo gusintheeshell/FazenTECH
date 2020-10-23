@@ -9,9 +9,10 @@ import SignUp from '../screens/SignUp';
 import { theme } from '../constants';
 // import Forgot from '../screens/Forgot';
 // import Explore from '../screens/Explore';
-// import Browse from '../screens/Browse';
+import Browse from '../screens/Browse';
 // import Product from '../screens/Product';
 // import Settings from '../screens/Settings';
+import Cart from '../screens/Cart';
 
 
 const screens = createStackNavigator({
@@ -20,9 +21,10 @@ const screens = createStackNavigator({
   SignUp,
   // Forgot,
   // Explore,
-  // Browse,
+  Browse,
   // Product,
   // Settings,
+  Cart,
 }, {
   defaultNavigationOptions: {
     headerTitle: null,
