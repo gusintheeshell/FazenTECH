@@ -130,8 +130,8 @@ ser enviadas por e-mail, para simular o envio ao servidor)
 
 ## Desenvolvedores/Contribuintes :octocat:
 
-| [<img src="https://avatars2.githubusercontent.com/u/44094756?s=460&u=a2a2631e8eb8f5f5cdff75121eb422188a64bb85&v=4" width=115><br><sub>Gustavo Barbosa</sub>](https://github.com/gusbdev) |  [<img src="https://avatars1.githubusercontent.com/u/48953919?s=460&u=26f01456d1c5777fa670c5ac0975bfe34b69d3bb&v=4" width=115><br><sub>Igor Gabriel</sub>](https://github.com/haadouukeen) |
-| :---: | :---: |
+| [<img src="https://avatars2.githubusercontent.com/u/44094756?s=460&u=a2a2631e8eb8f5f5cdff75121eb422188a64bb85&v=4" width=115><br><sub>Gustavo Barbosa</sub>](https://github.com/gusbdev) |  [<img src="https://avatars1.githubusercontent.com/u/48953919?s=460&u=26f01456d1c5777fa670c5ac0975bfe34b69d3bb&v=4" width=115><br><sub>Igor Gabriel</sub>](https://github.com/haadouukeen) | [<img src="https://avatars0.githubusercontent.com/u/58523789?s=400&v=4" width=115><br><sub>Ana Paula</sub>](https://github.com/ana-progcbr)
+| :---: | :---: | :---: |
 
 ## Licença 
 
