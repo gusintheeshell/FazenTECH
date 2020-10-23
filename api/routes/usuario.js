@@ -72,7 +72,15 @@ router.post('/finalizar',async(req,res,next) => {
     }
 
     var usuario = req.body.usuario;
-    var corpo = 'Prezado '+usuario.nome+', seu pedido foi finalizado com sucesso.';
+    var produtos = req.body.produtos;
+    var corpo = 'Prezado '+usuario.nome+', seu pedido foi finalizado com sucesso.<br/><br/><b>Produtos:</b><br/>';
+
+    produtos.forEach(prod => {
+        corpo += "Nome: "+prod.nome+"<br/>";
+        corpo += "Preço: "+prod.preco+"<br/>";
+        corpo += "Descrição: "+prod.descricao+"<br/><br/>";
+    });
+
     var error = await email.enviaEmail(usuario.email,'Pedido finalizado',corpo);
 
     if(error != null){
