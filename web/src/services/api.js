@@ -1,11 +1,13 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://testetrabalhofacul-com-br.umbler.net/',
-    headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
+    baseURL: 'http://localhost:3333',
+    // baseURL: 'http://testetrabalhofacul-com-br.umbler.net/',
+    headers:{
+        'Content-Type': 'application/json ',
+        'Accept': 'application/json',
+        "Access-Control-Origin": "*"
     },
-    method: 'OPTIONS',
 });
 
 export default api;

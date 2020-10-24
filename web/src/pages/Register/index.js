@@ -19,23 +19,19 @@ export default function Register(){
         e.preventDefault();
 
         const data = {
-            email,
-            nome,
-            senha,
+            email: email,
+            nome: nome,
+            senha: senha,
         };
 
         try{
-            const response = await api.post('usuario', data);
-            
-            console.log(response);
-            console.log(data);
+            await api.post('usuario', data);
 
-            alert(`${response.data.mensagem}`);
+            alert('Cadastro realizado.');
             history.push('/');
         }catch(error){
             alert('Erro no cadastro, tente novamente.');
             console.log(error.response);
-            console.log(typeof(data));
         }
     }
 
