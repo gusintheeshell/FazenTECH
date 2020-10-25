@@ -14,8 +14,6 @@ export default function Product(){
     const [descricao, setDescricao] = useState('');
     const [foto, setFoto] = useState(undefined);
 
-    const history = useHistory();
-
     async function handleAddProduct(e){
         e.preventDefault();
 
