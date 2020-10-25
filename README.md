@@ -68,6 +68,7 @@ seus pedidos, pagar e agendar a entrega.
 ## Mobile
 
 :warning: [Node](https://nodejs.org/en/download/)
+
 :warning: [React Native](https://reactnative.dev/docs/environment-setup)
 
 <p>Seguir os passos de configuração do ambiente</p>
@@ -79,6 +80,7 @@ seus pedidos, pagar e agendar a entrega.
 ## Frontend
 
 :warning: [Node](https://nodejs.org/en/download/)
+
 :warning: [ReactJS](https://pt-br.reactjs.org/docs/create-a-new-react-app.html#create-react-app)
 
 ## Banco de dados
@@ -231,5 +233,3 @@ ser enviadas por e-mail, para simular o envio ao servidor)
 ## Licença 
 
 The [MIT License]() (MIT)
-
-Copyright :copyright: 2020 - FazenTECH
