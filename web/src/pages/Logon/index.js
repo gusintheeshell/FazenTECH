@@ -3,7 +3,6 @@ import { Link, useHistory } from 'react-router-dom';
 import { FiLogIn } from 'react-icons/fi';
 import { FaEye } from 'react-icons/fa';
 
-import api from '../../services/api';
 import AuthContext from '../../contexts/auth';
 
 import './styles.css';
