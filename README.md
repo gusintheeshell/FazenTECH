@@ -16,6 +16,8 @@
 
 :small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
 
+:small_blue_diamond: [Contextualização do PTG](#contextualização-do-ptg)
+
 :small_blue_diamond: [Funcionalidades](#funcionalidades)
 
 :small_blue_diamond: [Layout da Aplicação](#layout-da-aplicação-dash)
