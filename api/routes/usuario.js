@@ -8,6 +8,7 @@ router.post('/login',(req,res,next) => {
     mysql.getConnection((error,conn) => {
         if(error){return res.status(500).send({ error:error }) }
 
+        console.log(req.body.password);
         var resu = false;
 
         if(req.body.email == null || req.body.senha == null){

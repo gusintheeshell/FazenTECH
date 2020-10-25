@@ -23,3 +23,14 @@
     font-size: 32px;
     margin-bottom: 32px;
 }
+
+i {
+    position: absolute;
+    top: 63%;
+    left: 35%;
+}
+
+i:hover {
+    color: #00fcb6;
+    cursor: pointer;
+}
