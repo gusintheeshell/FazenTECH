@@ -65,6 +65,32 @@ a comunicação com o servidor e banco de dados da fazenda.
 ## Frontend
 
 :warning: [Node](https://nodejs.org/en/download/)
+:warning: [ReactJS](https://pt-br.reactjs.org/docs/create-a-new-react-app.html#create-react-app)
+
+## Banco de dados
+
+Para poder salvar os dados no backend, precisa de um banco SQL instalado. Como se trata de apenas um trabalho acadêmico, recomenda-se instalar um servidor de código aberto, vamos recomendar o XAMPP. Ele possui versões para os principais sistemas operacionais (Windows, Linux e MacOS).
+
+:warning: [XAMPP](https://www.apachefriends.org/pt_br/download.html)
+
+Depois de instalado, abra o phpMyAdmin ou o terminal e crie o banco de dados. Pode dar o nome que preferir para o banco, só lembre de alterar depois no arquivo [api/mysql.js](https://github.com/gusbdev/FazenTECH/blob/master/api/mysql.js). Depois crie as seguintes tabelas:
+
+```
+create table usuario(
+	id int primary key auto_increment,
+    email varchar(200),
+    nome varchar(200),
+    senha varchar(200)
+);
+
+create table produto(
+	id int primary key auto_increment,
+    nome varchar(200),
+    preco double,
+    descricao varchar(2000),
+    foto blob null
+);
+```
 
 ## Como rodar a aplicação :arrow_forward:
 
@@ -76,7 +102,7 @@ git clone https://github.com/gusbdev/FazenTECH/
 
 Depois de clonar o projeto, seguir os passos para cada parte do projeto:
 
-## Mobile
+### Mobile ([app](https://github.com/gusbdev/FazenTECH/tree/master/app))
 
 Abrir o diretório app no terminal de alguma IDE ou simplesmente em um terminal do seu S.O e executar o comando:
 
@@ -98,9 +124,40 @@ npx react-native run-android
 
 Caso tenha configurado o ambiente corretamente, um celular será emulado no seu computador ou se configurou um dispositivo físico, a instalação do aplicativo será feita nele.
 
-## Backend (API)
+### Backend ([api](https://github.com/gusbdev/FazenTECH/tree/master/api))
 
-Coloque um passo a passo para rodar a sua aplicação. **Dica: clone o próprio projeto e verfique se o passo a passo funciona**
+Abrir o diretório api no terminal de alguma IDE ou simplesmente em um terminal do seu S.O e executar o comando:
+
+```
+npm install
+```
+Isso irá instalar as dependências usadas no projeto.
+
+Depois, execute o comando:
+
+```
+npm start
+```
+
+Isso irá executar o server, que está configurado na porta 3333.
+
+### Frontend ([web](https://github.com/gusbdev/FazenTECH/tree/master/api))
+
+Abrir o diretório api no terminal de alguma IDE ou simplesmente em um terminal do seu S.O e executar o comando:
+
+```
+npm install
+```
+Isso irá instalar as dependências usadas no projeto.
+
+Depois, execute o comando:
+
+```
+npm start
+```
+
+Isso irá executar a versão web no seu navegador padrão. Está configurado na porta 3000.
+
 
 ## Como rodar os testes
 
