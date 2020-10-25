@@ -2,6 +2,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/static/v1?label=REACT%20NATIVE&message=FRAMEWORK&color=00BEF5&style=for-the-badge&logo=REACT"/>
+  <img src="https://img.shields.io/static/v1?label=REACT%20JS&message=LIBRARY&color=0597ff&style=for-the-badge&logo=REACT"/>
   <img src="https://img.shields.io/static/v1?label=NODEJS&message=Runtime%20Built&color=339933&style=for-the-badge&logo=Node.js"/>
   <img src="https://img.shields.io/static/v1?label=JAVASCRIPT&message=Language&color=F7DF1E&style=for-the-badge&logo=javascript"/>
   <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
