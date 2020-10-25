@@ -34,6 +34,18 @@ a comunicação com o servidor e banco de dados da fazenda.
 </p>
 <p>E como extra, fizemos o backend (api) e uma versão web.</p>
 
+
+## Contextualização do PTG
+
+Uma das principais fontes de renda da fazenda de Lúcia é a venda do que ela produz, como o leite,
+legumes, verduras, entre outros produtos. Com a informatização da fazenda, tudo está ligado a um
+sistema robusto, capaz de gerenciar cada atividade e produções da fazenda, como por exemplo,
+controlar seus produtos e estoques.
+Lúcia vende em atacado para grandes varejistas, de forma tradicional, porém ela gostaria de expandir
+o negócio, e começar a oferecer seus produtos ao consumidor final! Para este fim, ela precisa de um
+aplicativo mobile para que os consumidores possam visualizar todo seu catálogo de produtos, efetuar
+seus pedidos, pagar e agendar a entrega.
+
 ## Funcionalidades
 
 :heavy_check_mark: Funcionalidade 1  
@@ -143,7 +155,7 @@ Isso irá executar o server, que está configurado na porta 3333.
 
 ### Frontend ([web](https://github.com/gusbdev/FazenTECH/tree/master/api))
 
-Abrir o diretório api no terminal de alguma IDE ou simplesmente em um terminal do seu S.O e executar o comando:
+Abrir o diretório web no terminal de alguma IDE ou simplesmente em um terminal do seu S.O e executar o comando:
 
 ```
 npm install
@@ -166,17 +178,6 @@ Coloque um passo a passo para executar os testes
 ```
 $ npm test, rspec, etc 
 ```
-
-## Contextualização do PTG
-
-Uma das principais fontes de renda da fazenda de Lúcia é a venda do que ela produz, como o leite,
-legumes, verduras, entre outros produtos. Com a informatização da fazenda, tudo está ligado a um
-sistema robusto, capaz de gerenciar cada atividade e produções da fazenda, como por exemplo,
-controlar seus produtos e estoques.
-Lúcia vende em atacado para grandes varejistas, de forma tradicional, porém ela gostaria de expandir
-o negócio, e começar a oferecer seus produtos ao consumidor final! Para este fim, ela precisa de um
-aplicativo mobile para que os consumidores possam visualizar todo seu catálogo de produtos, efetuar
-seus pedidos, pagar e agendar a entrega.
 
 ## JSON :floppy_disk:
 
