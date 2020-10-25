@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/FazenTECH/static/css/main.f66a62c9.chunk.css",
-    "main.js": "/FazenTECH/static/js/main.571925a8.chunk.js",
-    "main.js.map": "/FazenTECH/static/js/main.571925a8.chunk.js.map",
+    "main.js": "/FazenTECH/static/js/main.9cd0fa04.chunk.js",
+    "main.js.map": "/FazenTECH/static/js/main.9cd0fa04.chunk.js.map",
     "runtime-main.js": "/FazenTECH/static/js/runtime-main.881b4f72.js",
     "runtime-main.js.map": "/FazenTECH/static/js/runtime-main.881b4f72.js.map",
     "static/js/2.3bd3def4.chunk.js": "/FazenTECH/static/js/2.3bd3def4.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.881b4f72.js",
     "static/js/2.3bd3def4.chunk.js",
     "static/css/main.f66a62c9.chunk.css",
-    "static/js/main.571925a8.chunk.js"
+    "static/js/main.9cd0fa04.chunk.js"
   ]
 }
