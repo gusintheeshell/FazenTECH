@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/FazenTECH/static/css/main.f66a62c9.chunk.css",
-    "main.js": "/FazenTECH/static/js/main.ed85a1bf.chunk.js",
-    "main.js.map": "/FazenTECH/static/js/main.ed85a1bf.chunk.js.map",
+    "main.css": "/FazenTECH/static/css/main.2a83de24.chunk.css",
+    "main.js": "/FazenTECH/static/js/main.72f5000a.chunk.js",
+    "main.js.map": "/FazenTECH/static/js/main.72f5000a.chunk.js.map",
     "runtime-main.js": "/FazenTECH/static/js/runtime-main.881b4f72.js",
     "runtime-main.js.map": "/FazenTECH/static/js/runtime-main.881b4f72.js.map",
     "static/js/2.3bd3def4.chunk.js": "/FazenTECH/static/js/2.3bd3def4.chunk.js",
     "static/js/2.3bd3def4.chunk.js.map": "/FazenTECH/static/js/2.3bd3def4.chunk.js.map",
     "index.html": "/FazenTECH/index.html",
-    "static/css/main.f66a62c9.chunk.css.map": "/FazenTECH/static/css/main.f66a62c9.chunk.css.map",
+    "static/css/main.2a83de24.chunk.css.map": "/FazenTECH/static/css/main.2a83de24.chunk.css.map",
     "static/js/2.3bd3def4.chunk.js.LICENSE.txt": "/FazenTECH/static/js/2.3bd3def4.chunk.js.LICENSE.txt",
     "static/media/Asset 11.99b3dcbf.svg": "/FazenTECH/static/media/Asset 11.99b3dcbf.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.881b4f72.js",
     "static/js/2.3bd3def4.chunk.js",
-    "static/css/main.f66a62c9.chunk.css",
-    "static/js/main.ed85a1bf.chunk.js"
+    "static/css/main.2a83de24.chunk.css",
+    "static/js/main.72f5000a.chunk.js"
   ]
 }
