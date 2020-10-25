@@ -60,10 +60,8 @@ seus pedidos, pagar e agendar a entrega.
 
 ## Layout da Aplicação :dash:
 
-
 ![](https://github.com/gusbdev/FazenTECH/blob/master/media-project/1.gif)
 <caption>(App Mobile)</caption>
-
 
 ![](https://github.com/gusbdev/FazenTECH/blob/master/media-project/web-login-register.gif)
 <caption>(Versão Web)</caption>
