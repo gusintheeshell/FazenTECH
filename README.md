@@ -51,11 +51,20 @@ a comunicação com o servidor e banco de dados da fazenda.
 
 ## Pré-requisitos
 
+## Mobile
+
+:warning: [Node](https://nodejs.org/en/download/)
+:warning: [React Native](https://reactnative.dev/docs/environment-setup)
+
+<p>Seguir os passos de configuração do ambiente</p>
+
+## Backend
+
 :warning: [Node](https://nodejs.org/en/download/)
 
-...
+## Frontend
 
-Liste todas as dependencias e libs que o usuário deve ter instalado na máquina antes de rodar a aplicação 
+:warning: [Node](https://nodejs.org/en/download/)
 
 ## Como rodar a aplicação :arrow_forward:
 
@@ -65,7 +74,31 @@ No terminal, clone o projeto:
 git clone https://github.com/gusbdev/FazenTECH/
 ```
 
-... 
+Depois de clonar o projeto, seguir os passos para cada parte do projeto:
+
+## Mobile
+
+Abrir o diretório app no terminal de alguma IDE ou simplesmente em um terminal do seu S.O e executar o comando:
+
+```
+npm install
+```
+
+ou
+
+```
+yarn install
+```
+
+Depois, execute o comando:
+
+```
+npx react-native run-android
+```
+
+Caso tenha configurado o ambiente corretamente, um celular será emulado no seu computador ou se configurou um dispositivo físico, a instalação do aplicativo será feita nele.
+
+## Backend (API)
 
 Coloque um passo a passo para rodar a sua aplicação. **Dica: clone o próprio projeto e verfique se o passo a passo funciona**
 
