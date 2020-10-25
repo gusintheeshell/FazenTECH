@@ -24,13 +24,8 @@ export default function Login(){
     async function handleLogin(e){
         e.preventDefault();
 
-        const data = {
-            email,
-            senha,
-        }
-
         try{
-            await login(data);
+            await login(email, senha);
 
             history.push('/products');
         }catch(error){

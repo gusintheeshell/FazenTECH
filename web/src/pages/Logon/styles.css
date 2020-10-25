@@ -25,9 +25,9 @@
 }
 
 i {
-    position: absolute;
-    top: 63%;
-    left: 35%;
+    position: fixed;
+    top: 415px;
+    left: 480px;
 }
 
 i:hover {
