@@ -14,11 +14,9 @@ import logo from '../../assets/logo.png';
 export default function Login(){
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
-    const { signed, login } = useContext(AuthContext);
+    const { login } = useContext(AuthContext);
     const [passwordShow, setPasswordShown] = useState(false);
     const history = useHistory();
-
-    console.log(signed);
 
     const tooglePasswordVisibility = () => {
         setPasswordShown(passwordShow ? false : true);
@@ -33,12 +31,11 @@ export default function Login(){
         }
 
         try{
-            await login(email, senha);
+            await login(data);
 
             history.push('/products');
         }catch(error){
             alert('Falha no login, tente novamente.');
-            console.log(data);
             console.log(error.response);
         }
     }
