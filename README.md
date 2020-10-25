@@ -61,7 +61,7 @@ seus pedidos, pagar e agendar a entrega.
 ## Layout da Aplicação :dash:
 
 
-![](https://github.com/gusbdev/FazenTECH/blob/master/appGifs/1.gif)
+![](https://github.com/gusbdev/FazenTECH/blob/master/media-project/1.gif)
 
 ## Pré-requisitos
 
