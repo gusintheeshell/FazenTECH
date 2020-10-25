@@ -10,7 +10,7 @@ import AuthContext from '../src/contexts/auth';
 export default function Routes(){
     const { signed } = useContext(AuthContext);
     return(
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Switch>
                 {signed === false ? 
                 (
