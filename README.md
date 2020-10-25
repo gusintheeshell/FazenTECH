@@ -30,6 +30,7 @@ Trabalho interdisciplinar do 5º Semestre do curso de Análise e Desenvolvimento
 desenvolver uma espécie de protótipo funcional, com uma interface próxima à final, e contendo as
 principais funcionalidades e recursos, mas sem se preocupar ainda com métodos de pagamento ou
 a comunicação com o servidor e banco de dados da fazenda.
+E como extra, fizemos o backend (api) e uma versão web.
 </p>
 
 ## Funcionalidades
