@@ -247,7 +247,7 @@ class Welcome extends Component {
           </Button>
           <Button shadow onPress={() => navigation.navigate("SignUp")}>
             <Text center semibold>
-              Cadastra-se
+              Cadastrar-se
             </Text>
           </Button>
           <Button style={{ backgroundColor: 'transparent'}} onPress={() => this.setState({ showTerms: true })}>

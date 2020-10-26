@@ -4,6 +4,8 @@ import { Alert, ActivityIndicator, Keyboard, KeyboardAvoidingView, Platform, Sty
 import { Button, Block, Input, Text } from '../components';
 import { theme } from '../constants';
 
+import api from '../services/api';
+
 
 export default class SignUp extends React.Component {
 
@@ -11,16 +13,27 @@ export default class SignUp extends React.Component {
  }
  
  state = {
+  nome: null,
   email: null,
-  username: null,
-  password: null,
+  senha: null,
   errors: [],
   loading: false,
 }
 
+async handleCallApi(){
+  const { nome, email, senha } = this.state;
+
+  try{
+    await api.post('usuario', { nome, email, senha });
+  } catch(error){
+    alert('Erro no cadastro, tente novamente.');
+    console.log(error.response);
+  }
+}
+
 handleSignUp() {
   const { navigation } = this.props;
-  const { email, username, password } = this.state;
+  const { nome, email, senha } = this.state;
   const errors = [];
 
   Keyboard.dismiss();
@@ -28,15 +41,16 @@ handleSignUp() {
 
   // check with backend API or with some static data
   if (!email) errors.push('email');
-  if (!username) errors.push('username');
-  if (!password) errors.push('password');
+  if (!nome) errors.push('nome');
+  if (!senha) errors.push('senha');
+  this.handleCallApi();
 
   this.setState({ errors, loading: false });
 
   if (!errors.length) {
     Alert.alert(
-      'Success!',
-      'Your account has been created',
+      'Sucesso!',
+      'Sua conta foi criada.',
       [
         {
           text: 'Continue', onPress: () => {
@@ -70,16 +84,16 @@ handleSignUp() {
           />
           <Input 
             label="Nome"
-            style={[styles.input, hasErrors('username')]}
-            defaultValue={this.state.username}
-            onChangeText={text => this.setState({ username: text })}
+            style={[styles.input, hasErrors('nome')]}
+            defaultValue={this.state.nome}
+            onChangeText={text => this.setState({ nome: text })}
           />
           <Input 
             secure
             label="Senha"
-            style={[styles.input, hasErrors('password')]}
-            defaultValue={this.state.password}
-            onChangeText={text => this.setState({ password: text })}
+            style={[styles.input, hasErrors('senha')]}
+            defaultValue={this.state.senha}
+            onChangeText={text => this.setState({ senha: text })}
           />
           <Button gradient onPress={() => {this.handleSignUp()}}>
             {this.state.loading ?
