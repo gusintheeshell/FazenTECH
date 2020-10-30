@@ -9,8 +9,8 @@ module.exports = {
                 port: 465, // Port
                 secure: true, // this is true as port is 465
                 auth: {
-                    user: 'gigor818@gmail.com', // generated ethereal user
-                    pass: '40028922Ig@r', // generated ethereal password
+                    user: 'tads8650@gmail.com', // generated ethereal user
+                    pass: 'tadsnoite8650', // generated ethereal password
                 },
             });
          

@@ -12,16 +12,96 @@ import ItemsContainer from './components/ItemsContainer';
 import BasketContainer from './components/BasketComponent';
 import Footer from './components/Footer';
 
-import { data } from '../../data';
+const image1 = require('../../assets/images/icons8-abóbora-64.png');
+const image2 = require('../../assets/images/icons8-alho-64.png');
+const image3 = require('../../assets/images/icons8-berinjela-64.png');
+const image4 = require('../../assets/images/icons8-caixa-de-leite-64.png');
+const image5 = require('../../assets/images/icons8-cenoura-64.png');
+const image6 = require('../../assets/images/icons8-couve-flor-64.png');
+const image7 = require('../../assets/images/icons8-milho-64.png');
+const image8 = require('../../assets/images/icons8-repolho-64.png');
+const image9 = require('../../assets/images/icons8-soja-64.png');
+const image10 = require('../../assets/images/icons8-tomate-64.png');
+
 import { theme } from '../../constants';
 import { useCart } from '../../contexts/cart';
 
-import api from '../../services/api';
 
 export default function ProductList(){
-    const { add } = useCart();
+    const { add, quantidade, addQuantidade } = useCart();
 
-    const [quantidade, setQuantidade] = useState(0);
+    const data = [
+        {
+          id: 1,
+          image: image1,
+          nome: 'Abóbora',
+          preco: 3,
+          quantidade: quantidade,
+        },
+        {
+          id: 2,
+          image: image2,
+          nome: 'Alho',
+          preco: 3,
+          quantidade: quantidade,
+        },
+        {
+          id: 3,
+          image: image3,
+          nome: 'Berinjela',
+          preco: 3,
+          quantidade: quantidade,
+        },
+        {
+          id: 4,
+          image: image4,
+          nome: 'Caixa de Leite',
+          preco: 3,
+          quantidade: quantidade,
+        },
+        {
+          id: 5,
+          image: image5,
+          nome: 'Cenoura',
+          preco: 3,
+          quantidade: quantidade,
+        },
+        {
+          id: 6,
+          image: image6,
+          nome: 'Couve-Flor',
+          preco: 3,
+          quantidade: quantidade,
+        },
+        {
+          id: 7,
+          image: image7,
+          nome: 'Milho',
+          preco: 3,
+          quantidade: quantidade,
+        },
+        {
+          id: 8,
+          image: image8,
+          nome: 'Repolho',
+          preco: 3,
+          quantidade: quantidade,
+        },
+        {
+          id: 9,
+          image: image9,
+          nome: 'Soja',
+          preco: 3,
+          quantidade: quantidade,
+        },
+        {
+          id: 10,
+          image: image10,
+          nome: 'Tomate',
+          preco: 4,
+          quantidade: quantidade,
+        },
+      ];
 
         return(
         <View style={styles.container}>
@@ -45,7 +125,7 @@ export default function ProductList(){
                         </Text>
                     <View style={{flexDirection: 'row'}}>
                         <View style={{ flex: 1 }}>
-                        <NumericInput value={quantidade} onChange={quantidade => setQuantidade(quantidade)} />
+                        <NumericInput value={quantidade} onChange={quantidade => addQuantidade(quantidade)} />
                         </View>
                         <View style={{ flex: 1, marginRight: 20 }}>
                         <TouchableOpacity 

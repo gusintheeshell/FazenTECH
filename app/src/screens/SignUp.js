@@ -54,7 +54,7 @@ handleSignUp() {
       [
         {
           text: 'Continue', onPress: () => {
-            navigation.navigate('Browse')
+            navigation.navigate('Login')
           }
         }
       ],

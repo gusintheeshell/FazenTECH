@@ -20,14 +20,19 @@ router.post('/login',(req,res,next) => {
             'SELECT * FROM usuario WHERE lower(email) like lower(?) and senha like ?',
             [req.body.email,req.body.senha],
             (error,resultado,fields) => {
+                let nome, email;
                 if(error){return res.status(500).send({ error:error }) }
                 
                 if(resultado.length > 0){
                     resu = true;
+                    nome = resultado[0].nome;
+                    email = resultado[0].email;
                 }
 
                 return res.status(200).send({
-                    response:resu
+                    response:resu,
+                    email: email,
+                    nome: nome,
                 });
             }
         );

@@ -6,42 +6,48 @@ import NumericInput from 'react-native-numeric-input';
 
 import { theme } from '../../constants';
 import { useCart } from '../../contexts/cart';
+import api from '../../services/api';
 
 export default function Checkout(){
-    const { remove, cart, totalValue } = useCart();
+    const { remove, cart, addQuantidade, quantidade, totalValue } = useCart();
+    console.log(cart);
 
-    const [quantidade, setQuantidade] = useState(0);
-
-          return(
-              <>
+    return(
+        <>
             <View style={styles.container}>
                 <FlatList 
                     data={cart}
                     renderItem={({index, item}) => (
                         <View style={styles.incident}>
-                        <Image source={item.image} />
-                        <Text style={styles.incidentProperty}>NOME:</Text>
-                        <Text style={styles.incidentValue}>{item.nome}</Text>
-
+                            <View style={{ flexDirection: 'row', marginBottom: 30}}>
+                                <View style={{ flex: 1 }}>
+                                    <Image source={item.image} />
+                                </View>
+                                <View style={{ flex: 1 }}>
+                                    <Text style={styles.incidentProperty}>NOME:</Text>
+                                    <Text style={styles.incidentValue}>{item.nome}</Text>
+                                </View>
+                                <View style={{ flex: 1 }}>
+                                    <Text style={styles.incidentProperty}>VALOR:</Text>
+                                    <Text style={styles.incidentValue}>
+                                    {Intl.NumberFormat('pt-BR', {
+                                    style: 'currency',
+                                    currency: 'BRL'
+                                    }).format(item.preco)}
+                                    </Text>
+                                </View>
+                            </View>
                         <Text style={styles.incidentProperty}>DESCRIÇÃO:</Text>
                         <Text style={styles.incidentValue}>{item.descricao}</Text>
-
-                        <Text style={styles.incidentProperty}>VALOR:</Text>
-                        <Text style={styles.incidentValue}>
-                        {Intl.NumberFormat('pt-BR', {
-                         style: 'currency',
-                         currency: 'BRL'
-                         }).format(item.preco)}
-                         </Text>
                         <View style={{flexDirection: 'row'}}>
                             <View style={{ flex: 1 }}>
-                            <NumericInput value={quantidade} onChange={quantidade => setQuantidade(quantidade)} />
+                            <NumericInput value={quantidade} onChange={quantidade => addQuantidade(quantidade)} />
                             </View>
                             <View style={{ flex: 1, marginRight: 20 }}>
                             <TouchableOpacity 
-                            style={styles.detailsButton}
-                            onPress={() => remove(index)}
-                        >
+                                style={styles.detailsButton}
+                                onPress={() => remove(index)}
+                            >
                             <Text>Remover do carrinho</Text>
                         </TouchableOpacity>
                             </View>
@@ -53,20 +59,20 @@ export default function Checkout(){
             </View>
             <View style={{flexDirection: 'row', backgroundColor: 'white'}}>
                 <View style={{ flex:1 }}>
-                   <Text style={{ fontSize: 18, fontWeight: 'bold'}}>Total: {Intl.NumberFormat('pt-BR', {
-                     style: 'currency',
-                     currency: 'BRL'
-                     }).format(totalValue)}</Text> 
+                <Text style={{ fontSize: 18, fontWeight: 'bold'}}>Total: {Intl.NumberFormat('pt-BR', {
+                    style: 'currency',
+                    currency: 'BRL'
+                    }).format(totalValue)}</Text> 
                 </View>
                 <View style={{ flex:1 }}>
-                   <TouchableOpacity style={styles.detailsButton}>
-                       <Text>Fechar pedido</Text>
-                   </TouchableOpacity>
+                <TouchableOpacity style={styles.detailsButton} onPress={() => {}}>
+                    <Text>Fechar pedido</Text>
+                </TouchableOpacity>
                 </View>
             
             </View>
-            </>
-        );  
+        </>
+    );  
 }
 
 // export default class Cart extends React.Component{

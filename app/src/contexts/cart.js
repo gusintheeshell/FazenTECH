@@ -6,6 +6,7 @@ const CartContext = createContext();
 export default function CarProvider({ children }) {
     const [cart, setCart] = useState([]);
     const [totalValue, setTotalValue] = useState();
+    const [quantidade, setQuantidade] = useState(null);
 
     const showToastWithGravity = (nome) => {
         ToastAndroid.showWithGravity(
@@ -18,17 +19,22 @@ export default function CarProvider({ children }) {
     useEffect(() => {
         let value = 0;
         cart.map((item) => {
-            value = value + item.preco;
+            value = value + item.preco * item.quantidade;
         });
 
         setTotalValue(value);
-    }, [cart]);
+    }, [cart, quantidade]);
 
     function add(item){
         const newCart = cart;
         newCart.push(item);
         setCart([...newCart]);
         showToastWithGravity(item.nome);
+    }
+
+    function addQuantidade(quant){
+        setQuantidade(quant);
+        console.log(quant);
     }
 
     function remove(index){
@@ -40,6 +46,8 @@ export default function CarProvider({ children }) {
 
     const store = {
         add,
+        addQuantidade,
+        quantidade,
         remove,
         cart,
         totalValue,
@@ -58,6 +66,8 @@ export function useCart(){
     const {
         cart,
         add,
+        quantidade,
+        addQuantidade,
         remove,
         totalValue,
     } = context;
@@ -65,6 +75,8 @@ export function useCart(){
     return {
         cart,
         add,
+        addQuantidade,
+        quantidade,
         remove,
         totalValue,
     }

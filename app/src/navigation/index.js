@@ -22,20 +22,20 @@ import Checkout from '../screens/cart/Checkout';
 
 export default function Routes(){
   return (
-      <NavigationContainer>
-          <AppStack.Navigator>
-              <AppStack.Screen name="Welcome" component={Welcome} />
-              <AppStack.Screen name="Login" component={Login} />
-              <AppStack.Screen name="SignUp" component={SignUp} />
-              <AppStack.Screen name="Cart" component={Cart} 
-                options={{
-                  headerRight: (props) => (
-                    <ShoppingCartIcon />
-                  )
-              }}/>
-              <AppStack.Screen name="Checkout" component={Checkout} />
-          </AppStack.Navigator>
-      </NavigationContainer>
+    <NavigationContainer>
+        <AppStack.Navigator>
+            <AppStack.Screen name="Welcome" component={Welcome} />
+            <AppStack.Screen name="Login" component={Login} />
+            <AppStack.Screen name="SignUp" component={SignUp} />
+            <AppStack.Screen name="Cart" component={Cart} 
+              options={{
+                headerRight: (props) => (
+                  <ShoppingCartIcon />
+                )
+            }}/>
+            <AppStack.Screen name="Checkout" component={Checkout} />
+        </AppStack.Navigator>
+    </NavigationContainer>
   );
 }
 
