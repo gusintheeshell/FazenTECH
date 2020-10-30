@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import 'intl';
 import 'intl/locale-data/jsonp/pt-BR';
 import { Image, FlatList, View, Text, StyleSheet, ToastAndroid, TouchableOpacity } from 'react-native';
@@ -25,10 +25,12 @@ const image10 = require('../../assets/images/icons8-tomate-64.png');
 
 import { theme } from '../../constants';
 import { useCart } from '../../contexts/cart';
+import AuthContext from '../../contexts/auth';
 
 
 export default function ProductList(){
     const { add, quantidade, addQuantidade } = useCart();
+    const { nome } = useContext(AuthContext);
 
     const data = [
         {
@@ -104,6 +106,10 @@ export default function ProductList(){
       ];
 
         return(
+        <>
+        <View style={{ alignItems: 'center', justifyContent: 'center', marginBottom: 10 }}>
+        <Text style={{ fontSize: 20}}>O que vai ser hoje, {nome}?</Text>
+        </View>
         <View style={styles.container}>
             <FlatList 
                 data={data}
@@ -141,6 +147,7 @@ export default function ProductList(){
                 keyExtractor={item => String(item.id)}
             />
         </View>
+        </>
     );  
 }
 

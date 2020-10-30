@@ -34,7 +34,6 @@ export default function CarProvider({ children }) {
 
     function addQuantidade(quant){
         setQuantidade(quant);
-        console.log(quant);
     }
 
     function remove(index){

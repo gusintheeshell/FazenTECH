@@ -164,14 +164,13 @@ class Welcome extends Component {
 
   renderIllustrations() {
     const { illustrations } = this.props;
-
     return (
       <FlatList
         horizontal
         pagingEnabled
         scrollEnabled
         showsHorizontalScrollIndicator={false}
-        scrollEventThrottle={16}
+        scrollEventThrottle={1000}
         snapToAlignment="center"
         data={illustrations}
         extraDate={this.state}
@@ -191,7 +190,7 @@ class Welcome extends Component {
       />
     );
   }
-
+  
   renderSteps() {
     const { illustrations } = this.props;
     const stepPosition = Animated.divide(this.scrollX, width);

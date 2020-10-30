@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import 'intl';
 import 'intl/locale-data/jsonp/pt-BR';
 import { Image, FlatList, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
@@ -6,11 +6,29 @@ import NumericInput from 'react-native-numeric-input';
 
 import { theme } from '../../constants';
 import { useCart } from '../../contexts/cart';
+import AuthContenxt from '../../contexts/auth';
 import api from '../../services/api';
 
 export default function Checkout(){
     const { remove, cart, addQuantidade, quantidade, totalValue } = useCart();
+    const { nome, email } = useContext(AuthContenxt);
+    const [nomeProduto, setNomeProduto] = useState([{}]);
+    const [preco, setPreco] = useState([{}]);
+    const objectArray = Object.assign({}, cart);
     console.log(cart);
+
+
+
+    async function sendEmail(){
+        const response = await api.post('usuario/finalizar', {
+            usuario: {
+                nome,
+                email
+            },
+            produtos: cart
+        });
+        alert(response.data.response);
+    }
 
     return(
         <>
@@ -65,7 +83,7 @@ export default function Checkout(){
                     }).format(totalValue)}</Text> 
                 </View>
                 <View style={{ flex:1 }}>
-                <TouchableOpacity style={styles.detailsButton} onPress={() => {}}>
+                <TouchableOpacity style={styles.detailsButton} onPress={sendEmail}>
                     <Text>Fechar pedido</Text>
                 </TouchableOpacity>
                 </View>
@@ -74,98 +92,6 @@ export default function Checkout(){
         </>
     );  
 }
-
-// export default class Cart extends React.Component{
-//     static navigationOptions = {
-//         headerTitle: 'Shopping',
-//         headerRight:(
-//             <ShoppingCartIcon />
-//         )
-//     };
-
-//     add = useCart();
-
-//     constructor(props){
-//         super(props);
-
-//         this.state = {
-//             loading: false,
-//             data: data,
-//             page: 1,
-//             seed: 1,
-//             error: null,
-//             refreshing: false,
-//             quantidade: 0,
-//         };
-//     }
-
-//     _incrementCount = () => {
-//         this.setState(prevState => ({ quantidade: prevState.quantidade + 1 }));
-//     }
-
-//     _decrementCount = () => {
-//         this.setState(prevState => ({ quantidade: prevState.quantidade - 1 }));
-//     }
-
-//     // componentDidMount(){
-//     //     this.callApi();
-//     // }
-
-//     // async callApi(){
-//     //     // try{
-//     //         const response = await api.get('produtos/');
-//     //         this.setState({ data: response.data.response });
-//     //     // }catch(error){
-//     //     //     console.log(error);
-//     //     // }
-//     // }
-
-//     render(){
-//       return(
-//             <View style={styles.container}>
-//                 <FlatList 
-//                     data={data}
-//                     renderItem={({item}) => (
-//                         <View style={styles.incident}>
-//                         <Image source={item.image} />
-//                         <Text style={styles.incidentProperty}>NOME:</Text>
-//                         <Text style={styles.incidentValue}>{item.nome}</Text>
-
-//                         <Text style={styles.incidentProperty}>DESCRIÇÃO:</Text>
-//                         <Text style={styles.incidentValue}>{item.descricao}</Text>
-
-//                         <Text style={styles.incidentProperty}>VALOR:</Text>
-//                         <Text style={styles.incidentValue}>
-//                         {Intl.NumberFormat('pt-BR', {
-//                          style: 'currency',
-//                          currency: 'BRL'
-//                          }).format(item.preco)}
-//                          </Text>
-//                         <View style={{flexDirection: 'row'}}>
-//                             <View style={{ flex: 1 }}>
-//                             <NumericInput value={this.state.quantidade} onChange={quantidade => this.setState({quantidade})} />
-//                             </View>
-//                             <View style={{ flex: 1, marginRight: 20 }}>
-//                             <TouchableOpacity 
-//                             style={styles.detailsButton}
-//                             onPress={() => {}}
-//                         >
-//                             <Text>Adicionar ao carrinho</Text>
-//                         </TouchableOpacity>
-//                             </View>
-//                         </View>  
-//                     </View>
-//                     )} 
-//                     keyExtractor={item => String(item.id)}
-//                 />
-//             </View>
-//         );  
-//     } 
-// }
-
-// Cart.defaultProps = {
-//     data: data,
-// }
 
 const styles = StyleSheet.create({
     container: {

@@ -8,6 +8,8 @@ import {
 
 import { Button, Block, Input, Text } from "../components";
 import { theme } from "../constants";
+import api from '../services/api';
+import AuthContext from '../contexts/auth';
 
 const VALID_EMAIL = "fazentech@tech.com";
 const VALID_PASSWORD = "12345";
@@ -20,26 +22,21 @@ export default class Login extends Component {
     loading: false
   };
 
-  handleLogin() {
+  static contextType = AuthContext;
+
+  async handleLogin() {
     const { navigation } = this.props;
     const { email, password } = this.state;
-    const errors = [];
 
-    Keyboard.dismiss();
-    this.setState({ loading: true });
-
-    // check with backend API or with some static data
-    if (email !== VALID_EMAIL) {
-      errors.push("email");
-    }
-    if (password !== VALID_PASSWORD) {
-      errors.push("password");
-    }
-
-    this.setState({ errors, loading: false });
-
-    if (!errors.length) {
-      navigation.navigate("Cart");
+    try {
+      const response = await this.context.login(email, password);
+      if(response.data.response !== false){
+        navigation.navigate('Cart');
+      }else{
+        alert('Falha ao efetuar o login.');
+      }
+    } catch (error) {
+      console.log(error);
     }
   }
   

@@ -11,9 +11,11 @@ export default class App extends React.Component {
   render(){
     return (
       <Block white>
-        <CartProvider>
-          <Routes />
-        </CartProvider>
+        <AuthProvider>
+          <CartProvider>
+            <Routes />
+          </CartProvider>
+        </AuthProvider>
       </Block>
     );
   }

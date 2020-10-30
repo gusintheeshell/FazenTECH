@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Image } from 'react-native';
 // import { createAppContainer } from 'react-navigation';
 // import { createStackNavigator } from 'react-navigation-stack';
@@ -17,23 +17,38 @@ import { theme } from '../constants';
 import Browse from '../screens/Browse';
 // import Product from '../screens/Product';
 // import Settings from '../screens/Settings';
-import Cart from '../screens/cart/Cart';
+import Cart from '../screens/cart/Produtos';
 import Checkout from '../screens/cart/Checkout';
+import AuthContext from '../contexts/auth';
 
 export default function Routes(){
+  const { signed } = useContext(AuthContext);
   return (
     <NavigationContainer>
         <AppStack.Navigator>
-            <AppStack.Screen name="Welcome" component={Welcome} />
+          {signed === false ? (
+            <>
+            <AppStack.Screen name="Welcome" component={Welcome} 
+              options={{
+                headerShown: false,
+              }}
+            />
             <AppStack.Screen name="Login" component={Login} />
             <AppStack.Screen name="SignUp" component={SignUp} />
+            </>
+          ) : (
+            <>
             <AppStack.Screen name="Cart" component={Cart} 
               options={{
                 headerRight: (props) => (
                   <ShoppingCartIcon />
-                )
+                ),
+                headerLeft: false,
+                headerTitle: false,
             }}/>
             <AppStack.Screen name="Checkout" component={Checkout} />
+            </>
+          )}
         </AppStack.Navigator>
     </NavigationContainer>
   );
