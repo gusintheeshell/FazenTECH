@@ -1,4 +1,4 @@
-<h1>FazenTECH</h1> 
+<h1>FazenTECH</h1>
 
 <p align="center">
   <img src="https://img.shields.io/static/v1?label=REACT%20NATIVE&message=FRAMEWORK&color=00BEF5&style=for-the-badge&logo=REACT"/>
@@ -12,7 +12,7 @@
 
 > Status do Projeto: :warning: (em desenvolvimento)
 
-### Tópicos 
+### Tópicos
 
 :small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
 
@@ -26,7 +26,7 @@
 
 :small_blue_diamond: [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
 
-## Descrição do projeto 
+## Descrição do projeto
 
 <p align="justify">
 Trabalho interdisciplinar do 5º Semestre do curso de Análise e Desenvolvimento de Sistemas. A tarefa é desenvolver um aplicativo, que inicialmente funcionará apenas em dispositivos Android. Mas antes de chegar ao produto que será disponibilizado aos usuários, será preciso
@@ -35,7 +35,6 @@ principais funcionalidades e recursos, mas sem se preocupar ainda com métodos d
 a comunicação com o servidor e banco de dados da fazenda.
 </p>
 <p>E como extra, fizemos o backend (api) e uma versão web.</p>
-
 
 ## Contextualização do PTG
 
@@ -50,20 +49,38 @@ seus pedidos, pagar e agendar a entrega.
 
 ## Funcionalidades
 
-:heavy_check_mark: Funcionalidade 1  
+:heavy_check_mark: Funcionalidade 1
 
-:heavy_check_mark: Funcionalidade 2  
+:heavy_check_mark: Funcionalidade 2
 
-:heavy_check_mark: Funcionalidade 3  
+:heavy_check_mark: Funcionalidade 3
 
-:heavy_check_mark: Funcionalidade 4  
+:heavy_check_mark: Funcionalidade 4
 
 ## Layout da Aplicação :dash:
 
-![](https://github.com/gusbdev/FazenTECH/blob/master/media-project/1.gif)
-<caption>(App Mobile)</caption>
+![](https://github.com/gusbdev/FazenTECH/blob/master/media-project/screenshots/app/Screenshot_20201030-221332.png)
+
+<caption>(Tela inicial)</caption>
+
+![](https://github.com/gusbdev/FazenTECH/blob/master/media-project/screenshots/app/Screenshot_20201030-221346.png)
+
+<caption>(Tela de login)</caption>
+
+![](https://github.com/gusbdev/FazenTECH/blob/master/media-project/screenshots/app/Screenshot_20201030-221354.png)
+
+<caption>(Tela de cadastro de usuário)</caption>
+
+![](https://github.com/gusbdev/FazenTECH/blob/master/media-project/screenshots/app/Screenshot_20201030-221629.png)
+
+<caption>(Tela com os produtos listados)</caption>
+
+![](https://github.com/gusbdev/FazenTECH/blob/master/media-project/screenshots/app/Screenshot_20201030-223038.png)
+
+<caption>(Tela de checkout)</caption>
 
 ![](https://github.com/gusbdev/FazenTECH/blob/master/media-project/web-login-register.gif)
+
 <caption>(Versão Web)</caption>
 
 ## Pré-requisitos
@@ -113,7 +130,7 @@ create table produto(
 
 ## Como rodar a aplicação :arrow_forward:
 
-No terminal, clone o projeto: 
+No terminal, clone o projeto:
 
 ```
 git clone https://github.com/gusbdev/FazenTECH/
@@ -150,6 +167,7 @@ Abrir o diretório api no terminal de alguma IDE ou simplesmente em um terminal 
 ```
 npm install
 ```
+
 Isso irá instalar as dependências usadas no projeto.
 
 Depois, execute o comando:
@@ -167,6 +185,7 @@ Abrir o diretório web no terminal de alguma IDE ou simplesmente em um terminal 
 ```
 npm install
 ```
+
 Isso irá instalar as dependências usadas no projeto.
 
 Depois, execute o comando:
@@ -177,30 +196,29 @@ npm start
 
 Isso irá executar a versão web no seu navegador padrão. Está configurado na porta 3000.
 
-
 ## Como rodar os testes
 
 Coloque um passo a passo para executar os testes
 
 ```
-$ npm test, rspec, etc 
+$ npm test, rspec, etc
 ```
 
 ## JSON :floppy_disk:
 
-### Usuários: 
+### Usuários:
 
-|name|email|password|token|avatar|
-| -------- |-------- |-------- |-------- |-------- |
-|Lais Lima|laislima98@hotmail.com|lais123|true|https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9-U_HbQAipum9lWln3APcBIwng7T46hdBA42EJv8Hf6Z4fDT3&usqp=CAU|
+| name      | email                  | password | token | avatar                                                                                                              |
+| --------- | ---------------------- | -------- | ----- | ------------------------------------------------------------------------------------------------------------------- |
+| Lais Lima | laislima98@hotmail.com | lais123  | true  | https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9-U_HbQAipum9lWln3APcBIwng7T46hdBA42EJv8Hf6Z4fDT3&usqp=CAU |
 
-... 
+...
 
-Se quiser, coloque uma amostra do banco de dados 
+Se quiser, coloque uma amostra do banco de dados
 
 ## Iniciando/Configurando banco de dados
 
-Se for necessário configurar algo antes de iniciar o banco de dados insira os comandos a serem executados 
+Se for necessário configurar algo antes de iniciar o banco de dados insira os comandos a serem executados
 
 ## Linguagens, dependencias e libs utilizadas :books:
 
@@ -209,11 +227,11 @@ Se for necessário configurar algo antes de iniciar o banco de dados insira os c
 
 ...
 
-Liste as tecnologias utilizadas no projeto que **não** forem reconhecidas pelo Github 
+Liste as tecnologias utilizadas no projeto que **não** forem reconhecidas pelo Github
 
 ## Resolvendo Problemas :exclamation:
 
-Em [issues]() foram abertos alguns problemas gerados durante o desenvolvimento desse projeto e como foram resolvidos. 
+Em [issues]() foram abertos alguns problemas gerados durante o desenvolvimento desse projeto e como foram resolvidos.
 
 ## Tarefas em aberto
 
@@ -230,9 +248,10 @@ ser enviadas por e-mail, para simular o envio ao servidor)
 
 ## Desenvolvedores/Contribuintes :octocat:
 
-| [<img src="https://avatars2.githubusercontent.com/u/44094756?s=460&u=a2a2631e8eb8f5f5cdff75121eb422188a64bb85&v=4" width=115><br><sub>Gustavo Barbosa</sub>](https://github.com/gusbdev) |  [<img src="https://avatars1.githubusercontent.com/u/48953919?s=460&u=26f01456d1c5777fa670c5ac0975bfe34b69d3bb&v=4" width=115><br><sub>Igor Gabriel</sub>](https://github.com/haadouukeen) | [<img src="https://avatars0.githubusercontent.com/u/58523789?s=400&v=4" width=115><br><sub>Ana Paula</sub>](https://github.com/ana-progcbr) | [<img src="https://avatars1.githubusercontent.com/u/46965267?s=400&v=4" width=115><br><sub>Rondiney Rafael</sub>](https://github.com/Dineysilva18)
-| :---: | :---: | :---: | :---: |
+| [<img src="https://avatars2.githubusercontent.com/u/44094756?s=460&u=a2a2631e8eb8f5f5cdff75121eb422188a64bb85&v=4" width=115><br><sub>Gustavo Barbosa</sub>](https://github.com/gusbdev) | [<img src="https://avatars1.githubusercontent.com/u/48953919?s=460&u=26f01456d1c5777fa670c5ac0975bfe34b69d3bb&v=4" width=115><br><sub>Igor Gabriel</sub>](https://github.com/haadouukeen) | [<img src="https://avatars0.githubusercontent.com/u/58523789?s=400&v=4" width=115><br><sub>Ana Paula</sub>](https://github.com/ana-progcbr) | [<img src="https://avatars1.githubusercontent.com/u/46965267?s=400&v=4" width=115><br><sub>Rondiney Rafael</sub>](https://github.com/Dineysilva18) |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------: |
 
-## Licença 
+
+## Licença
 
 The [MIT License]() (MIT)
