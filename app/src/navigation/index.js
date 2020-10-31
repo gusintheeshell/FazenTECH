@@ -1,7 +1,5 @@
 import React, {useContext} from 'react';
 import {Image} from 'react-native';
-// import { createAppContainer } from 'react-navigation';
-// import { createStackNavigator } from 'react-navigation-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
@@ -52,7 +50,7 @@ export default function Routes() {
               options={{
                 headerRight: (props) => <ShoppingCartIcon />,
                 headerLeft: false,
-                headerTitle: false,
+                headerTitle: 'Produtos',
               }}
             />
             <AppStack.Screen name="Checkout" component={Checkout} />
