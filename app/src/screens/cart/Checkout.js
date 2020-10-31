@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import 'intl';
 import 'intl/locale-data/jsonp/pt-BR';
-import { Image, FlatList, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { Image, FlatList, View, Text, StyleSheet, ToastAndroid, TouchableOpacity } from 'react-native';
 import NumericInput from 'react-native-numeric-input';
 
 import { theme } from '../../constants';
@@ -12,14 +12,17 @@ import api from '../../services/api';
 export default function Checkout(){
     const { remove, cart, addQuantidade, quantidade, totalValue } = useCart();
     const { nome, email } = useContext(AuthContenxt);
-    const [nomeProduto, setNomeProduto] = useState([{}]);
-    const [preco, setPreco] = useState([{}]);
-    const objectArray = Object.assign({}, cart);
-    console.log(cart);
 
-
+    const showToastWithGravity = () => {
+        ToastAndroid.showWithGravity(
+          'Enviando e-mail.',
+          ToastAndroid.SHORT,
+          ToastAndroid.BOTTOM
+        );
+    };
 
     async function sendEmail(){
+        showToastWithGravity();
         const response = await api.post('usuario/finalizar', {
             usuario: {
                 nome,
@@ -30,7 +33,7 @@ export default function Checkout(){
         alert(response.data.response);
     }
 
-    return(
+    return (
         <>
             <View style={styles.container}>
                 <FlatList 

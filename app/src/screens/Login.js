@@ -1,72 +1,71 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   ActivityIndicator,
+  Image,
   Keyboard,
   KeyboardAvoidingView,
-  StyleSheet
-} from "react-native";
+  StyleSheet,
+} from 'react-native';
 
-import { Button, Block, Input, Text } from "../components";
-import { theme } from "../constants";
+import {Button, Block, Input, Text} from '../components';
+import {theme} from '../constants';
+import logo from '../assets/images/logo.png';
 import api from '../services/api';
 import AuthContext from '../contexts/auth';
 
-const VALID_EMAIL = "fazentech@tech.com";
-const VALID_PASSWORD = "12345";
+const VALID_EMAIL = 'fazentech@tech.com';
+const VALID_PASSWORD = '12345';
 
 export default class Login extends Component {
   state = {
     email: VALID_EMAIL,
     password: VALID_PASSWORD,
     errors: [],
-    loading: false
+    loading: false,
   };
 
   static contextType = AuthContext;
 
   async handleLogin() {
-    const { navigation } = this.props;
-    const { email, password } = this.state;
+    const {navigation} = this.props;
+    const {email, password} = this.state;
 
     try {
       const response = await this.context.login(email, password);
-      if(response.data.response !== false){
+      if (response.data.response !== false) {
         navigation.navigate('Cart');
-      }else{
+      } else {
         alert('Falha ao efetuar o login.');
       }
     } catch (error) {
       console.log(error);
     }
   }
-  
 
   render() {
-    const { navigation } = this.props;
-    const { loading, errors } = this.state;
-    const hasErrors = key => (errors.includes(key) ? styles.hasErrors : null);
+    const {navigation} = this.props;
+    const {loading, errors} = this.state;
+    const hasErrors = (key) => (errors.includes(key) ? styles.hasErrors : null);
 
     return (
       <KeyboardAvoidingView style={styles.login} behavior="height">
         <Block padding={[0, theme.sizes.base * 2]}>
-          <Text h1 bold>
-            Entrar
-          </Text>
+          <Image source={logo} style={{width: 210, height: 50}} />
           <Block middle>
             <Input
               label="Email"
-              error={hasErrors("email")}
-              style={[styles.input, hasErrors("email")]}
+              error={hasErrors('email')}
+              style={[styles.input, hasErrors('email')]}
               defaultValue={this.state.email}
-              onChangeText={text => this.setState({ email: text })}
+              onChangeText={(text) => this.setState({email: text})}
             />
             <Input
               secure
               label="Senha"
-              error={hasErrors("password")}
-              style={[styles.input, hasErrors("password")]}
+              error={hasErrors('password')}
+              style={[styles.input, hasErrors('password')]}
               defaultValue={this.state.password}
-              onChangeText={text => this.setState({ password: text })}
+              onChangeText={(text) => this.setState({password: text})}
             />
             <Button gradient onPress={() => this.handleLogin()}>
               {loading ? (
@@ -87,7 +86,7 @@ export default class Login extends Component {
 const styles = StyleSheet.create({
   login: {
     flex: 1,
-    justifyContent: "center"
+    justifyContent: 'center',
   },
   input: {
     borderRadius: 0,
@@ -97,6 +96,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
   },
   hasErrors: {
-    borderBottomColor: theme.colors.accent
-  }
+    borderBottomColor: theme.colors.accent,
+  },
 });

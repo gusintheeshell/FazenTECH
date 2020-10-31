@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from 'react';
+import React, {createContext, useEffect, useState} from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import api from '../services/api';
@@ -9,7 +9,7 @@ const AuthContext = createContext({
   email: '',
 });
 
-export const AuthProvider = ({ children }) => {
+export const AuthProvider = ({children}) => {
   const [signed, setSigned] = useState(false);
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
@@ -31,11 +31,11 @@ export const AuthProvider = ({ children }) => {
   async function login(email, senha) {
     const response = await api.post('usuario/login', {email, senha});
 
-    if(response.data.response !== false){
+    if (response.data.response !== false) {
       setSigned(response.data.response);
       setNome(response.data.nome);
       setEmail(response.data.email);
-  
+
       await AsyncStorage.setItem('nome', response.data.nome);
       await AsyncStorage.setItem('email', response.data.email);
     }
@@ -43,12 +43,12 @@ export const AuthProvider = ({ children }) => {
     return response;
   }
 
-  function logout(){
+  function logout() {
     setSigned(false);
   }
 
   return (
-    <AuthContext.Provider value={{ signed, login, logout, nome, email }}>
+    <AuthContext.Provider value={{signed, login, logout, nome, email}}>
       {children}
     </AuthContext.Provider>
   );
