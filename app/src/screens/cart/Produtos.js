@@ -11,16 +11,15 @@ import {
 } from 'react-native';
 import NumericInput from 'react-native-numeric-input';
 
-const image1 = require('../../assets/images/icons8-abóbora-64.png');
-const image2 = require('../../assets/images/icons8-alho-64.png');
-const image3 = require('../../assets/images/icons8-berinjela-64.png');
-const image4 = require('../../assets/images/icons8-caixa-de-leite-64.png');
-const image5 = require('../../assets/images/icons8-cenoura-64.png');
-const image6 = require('../../assets/images/icons8-couve-flor-64.png');
-const image7 = require('../../assets/images/icons8-milho-64.png');
-const image8 = require('../../assets/images/icons8-repolho-64.png');
-const image9 = require('../../assets/images/icons8-soja-64.png');
-const image10 = require('../../assets/images/icons8-tomate-64.png');
+const image1 = require('../../assets/images/orange.jpg');
+const image2 = require('../../assets/images/lemon.jpg');
+const image3 = require('../../assets/images/abacaxi.png');
+const image4 = require('../../assets/images/acerola.jpg');
+const image5 = require('../../assets/images/mexerica.jpg');
+const image6 = require('../../assets/images/lima.png');
+const image7 = require('../../assets/images/kiwi.jpg');
+const image8 = require('../../assets/images/morango.jpg');
+const image9 = require('../../assets/images/roma.jpeg');
 
 import {theme} from '../../constants';
 import {useCart} from '../../contexts/cart';
@@ -34,71 +33,64 @@ export default function ProductList() {
     {
       id: 1,
       image: image1,
-      nome: 'Abóbora',
+      nome: 'Laranja',
       preco: 3,
       quantidade: quantidade,
     },
     {
       id: 2,
       image: image2,
-      nome: 'Alho',
+      nome: 'Limão',
       preco: 3,
       quantidade: quantidade,
     },
     {
       id: 3,
       image: image3,
-      nome: 'Berinjela',
+      nome: 'Abacaxi',
       preco: 3,
       quantidade: quantidade,
     },
     {
       id: 4,
       image: image4,
-      nome: 'Caixa de Leite',
+      nome: 'Acerola',
       preco: 3,
       quantidade: quantidade,
     },
     {
       id: 5,
       image: image5,
-      nome: 'Cenoura',
+      nome: 'Caju',
       preco: 3,
       quantidade: quantidade,
     },
     {
       id: 6,
       image: image6,
-      nome: 'Couve-Flor',
+      nome: 'Lima',
       preco: 3,
       quantidade: quantidade,
     },
     {
       id: 7,
       image: image7,
-      nome: 'Milho',
+      nome: 'Kiwi',
       preco: 3,
       quantidade: quantidade,
     },
     {
       id: 8,
       image: image8,
-      nome: 'Repolho',
+      nome: 'Morango',
       preco: 3,
       quantidade: quantidade,
     },
     {
       id: 9,
       image: image9,
-      nome: 'Soja',
+      nome: 'Romã',
       preco: 3,
-      quantidade: quantidade,
-    },
-    {
-      id: 10,
-      image: image10,
-      nome: 'Tomate',
-      preco: 4,
       quantidade: quantidade,
     },
   ];
@@ -118,7 +110,7 @@ export default function ProductList() {
           data={data}
           renderItem={({item}) => (
             <View style={styles.incident}>
-              <Image source={item.image} />
+              <Image source={item.image} style={{width: 64, height: 64}} />
               <Text style={styles.incidentProperty}>NOME:</Text>
               <Text style={styles.incidentValue}>{item.nome}</Text>
 

@@ -50,7 +50,7 @@ export default function Checkout() {
             <View style={styles.incident}>
               <View style={{flexDirection: 'row', marginBottom: 30}}>
                 <View style={{flex: 1}}>
-                  <Image source={item.image} />
+                  <Image source={item.image} style={{width: 64, height: 64}} />
                 </View>
                 <View style={{flex: 1}}>
                   <Text style={styles.incidentProperty}>NOME:</Text>
