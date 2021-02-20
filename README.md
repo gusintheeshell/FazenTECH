@@ -55,7 +55,6 @@ seus pedidos, pagar e agendar a entrega.
 
 :heavy_check_mark: Funcionalidade 3
 
-:heavy_check_mark: Funcionalidade 4
 
 ## Layout da Aplicação :dash:
 
