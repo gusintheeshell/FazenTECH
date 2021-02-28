@@ -197,18 +197,6 @@ Coloque um passo a passo para executar os testes
 $ npm test, rspec, etc
 ```
 
-## JSON :floppy_disk:
-
-### Usuários:
-
-| name      | email                  | password | token | avatar                                                                                                              |
-| --------- | ---------------------- | -------- | ----- | ------------------------------------------------------------------------------------------------------------------- |
-| Lais Lima | laislima98@hotmail.com | lais123  | true  | https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9-U_HbQAipum9lWln3APcBIwng7T46hdBA42EJv8Hf6Z4fDT3&usqp=CAU |
-
-...
-
-Se quiser, coloque uma amostra do banco de dados
-
 ## Iniciando/Configurando banco de dados
 
 Se for necessário configurar algo antes de iniciar o banco de dados insira os comandos a serem executados
