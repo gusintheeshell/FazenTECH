@@ -58,23 +58,15 @@ seus pedidos, pagar e agendar a entrega.
 
 ## Layout da Aplicação :dash:
 
-<caption>(Tela inicial)</caption>
-![](https://github.com/gusbdev/FazenTECH/blob/master/media-project/screenshots/app/Screenshot_20201030-221332.png)
-
-<caption>(Tela de login)</caption>
-![](https://github.com/gusbdev/FazenTECH/blob/master/media-project/screenshots/app/Screenshot_20201030-221346.png)
-
-<caption>(Tela de cadastro de usuário)</caption>
-![](https://github.com/gusbdev/FazenTECH/blob/master/media-project/screenshots/app/Screenshot_20201030-221354.png)
-
-<caption>(Tela com os produtos listados)</caption>
-![](https://github.com/gusbdev/FazenTECH/blob/master/media-project/screenshots/app/Screenshot_20201030-221629.png)
-
-<caption>(Tela de checkout)</caption>
-![](https://github.com/gusbdev/FazenTECH/blob/master/media-project/screenshots/app/Screenshot_20201030-223038.png)
+<table align="center">
+	<tr align="center"><td><img src="https://github.com/gusbdev/FazenTECH/blob/master/media-project/screenshots/app/Screenshot_20201030-221332.png" width="300" height="500" /><br /><sub>Tela inicial</sub></td><td><img src="https://github.com/gusbdev/FazenTECH/blob/master/media-project/screenshots/app/Screenshot_20201030-221346.png" width="300" height="500" /><br /><sub>Tela de login</sub></td><td><img src="https://github.com/gusbdev/FazenTECH/blob/master/media-project/screenshots/app/Screenshot_20201030-221354.png" width="300" height="500" /><br /><sub>Tela de cadastro de usuário</sub></td></tr>
+	<tr align="center"><td><img src="https://github.com/gusbdev/FazenTECH/blob/master/media-project/screenshots/app/Screenshot_20201030-221629.png" width="300" height="500" /><br /><sub>Tela com os produtos listados</sub></td><td><img src="https://github.com/gusbdev/FazenTECH/blob/master/media-project/screenshots/app/Screenshot_20201030-223038.png" width="300" height="500" /><br /><sub>Tela de checkout</sub></td></tr>
+</table>
 
 <caption>(Versão Web)</caption>
-![](https://github.com/gusbdev/FazenTECH/blob/master/media-project/web-login-register.gif)
+<p align="center">
+<img src="https://github.com/gusbdev/FazenTECH/blob/master/media-project/web-login-register.gif" />
+</p>
 
 ## Pré-requisitos
 
